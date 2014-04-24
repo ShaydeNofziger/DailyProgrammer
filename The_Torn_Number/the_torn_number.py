@@ -19,8 +19,7 @@ def main():
 
 def isValid(number):
 	if checkAllDifferent(number):
-		first_num = int(str(number)[0:2])
-		second_num = int(str(number)[2:4])
+		first_num, second_num = divmod(number, 100)
 		result = (first_num + second_num)**2
 		if result == number:
 			return True
